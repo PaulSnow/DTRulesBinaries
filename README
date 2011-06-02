@@ -1,0 +1,11 @@
+For 5.0-SNAPSHOT
+
+DTRules.jar is just the class files for DTRules.
+
+DTRulesSrc.jar is the class files plus the source for DTRules
+
+DSLCompiler2Src.jar is the compiler support interfaces for DTRules.  You do not need to deploy this jar file unless you are intending to recompile rules within your application.  If you do want to be able to recompile Decision Table XML at runtime, you not only need this jar, but also a compiler (like EL (ELSrc.jar)).  DSLComiler2Src.jar requires java-cup-11a.jar, and poi-3.8-beta1-20110307.jar.  
+
+ELSrc.jar is a reference compiler for use with DTRules.  This compiler converts the domain specific langauge used in the decision tables into postfix which it adds to the "compiled" XML.  You do not need to deploy the compiler with your application unless you intend to recomile decision tables as part of the execution of your application.  If you deploy ELSrc.jar, then you also need to deploy DSLComiler2Src.jar
+
+JFlex is needed if you want to modify EL, or if you want to modify the XMLParser included in DTRules.jar.  Otherwise, it is not needed to run Decision Tables, nor is it needed to compile Decision Tables.
