@@ -690,9 +690,9 @@ client.notes /Result.notes xdef
 <action_number>4</action_number>
 <action_comment>Copy the client ID</action_comment>
 <initial_action_requirement></initial_action_requirement>
-<action_description>Set Result.client_id = client.client_id</action_description>
+<action_description>Set Result.client_id = client.id</action_description>
 <action_postfix>
-client.client_id cvs /Result.client_id xdef  
+client.id  cvs /Result.client_id xdef  
 </action_postfix>
 <action_column column_value="X" column_number="1"></action_column></action_details>
 <action_details>
